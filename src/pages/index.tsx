@@ -3,8 +3,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import useSWR from 'swr';
+import { fetcherGet } from '../swr/fetcher';
 
 const Home: NextPage = () => {
+  const { data, error } = useSWR('/prefectures', fetcherGet);
   return (
     <div className={styles.container}>
       <Head>
