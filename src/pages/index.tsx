@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   const { data, error } = useSWR('/prefectures', fetcherGet);
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
-  return <div className={styles.container}>{data}!</div>;
+  return <div className={styles.container}>{JSON.stringify(data)}</div>;
 };
 
 export default Home;
