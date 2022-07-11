@@ -1,4 +1,13 @@
 import { Axios } from './axios';
 
-export const fetcherGet = (url: string) =>
-  Axios.get(url).then((res) => res.data);
+interface fetcherGetProps {
+  url: string;
+  token?: string;
+}
+
+export const fetcherGet = ({ url, token }: fetcherGetProps) =>
+  token
+    ? Axios.get(url, {
+        headers: { 'X-API-KEY': token },
+      }).then((res) => res.data)
+    : Axios.get(url).then((res) => res.data);
