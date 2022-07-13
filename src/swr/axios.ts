@@ -5,6 +5,5 @@ export const Axios = axios.create({
   responseType: 'json',
   headers: {
     'Content-Type': 'application/json',
-    'X-API-KEY': `${process.env.NEXT_PUBLIC_RESAS_API_KEY}`,
   },
 });
