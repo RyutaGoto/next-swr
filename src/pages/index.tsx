@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import styles from '../styles/Home.module.css';
-import { usePrefectures } from '../ hooks/usePrefectures';
+import { usePrefectures } from '../hooks/usePrefectures';
 
 const Home: NextPage = () => {
   const { prefectures, isLoading, isError } = usePrefectures();
