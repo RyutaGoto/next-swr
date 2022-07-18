@@ -21,7 +21,8 @@ const SWRMutate: NextPage = () => {
 
   const updateCookieVal = (key: string, val: string) => {
     document.cookie = key + '=' + encodeURIComponent(val);
-    mutate(val);
+    mutate(val); // bound mutation
+    // mutate('foo') // refetch mutation
   };
 
   return (
