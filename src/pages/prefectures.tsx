@@ -15,7 +15,11 @@ const Prefectures: NextPage = () => {
             prefCode: number | null | undefined;
             prefName: string | null | undefined;
           }) => (
-            <li key={item.prefCode}>{item.prefName}</li>
+            <li key={item.prefCode}>
+              <Link href={'/prefectures/#'}>
+                <a>{item.prefName}</a>
+              </Link>
+            </li>
           )
         )}
       </ul>
