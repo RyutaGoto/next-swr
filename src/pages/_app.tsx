@@ -4,7 +4,7 @@ import { SWRConfig } from 'swr';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <SWRConfig value={{ refreshInterval: 5000 }}>
+    <SWRConfig value={{ refreshInterval: 0 }}>
       <Component {...pageProps} />
     </SWRConfig>
   );
