@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 
-const List: NextPage = () => {
+const Prefectures: NextPage = () => {
   return <></>;
 };
 
-export default List;
+export default Prefectures;
