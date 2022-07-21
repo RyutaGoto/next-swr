@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { usePrefectures } from '../hooks/usePrefectures';
+import { usePrefectures } from '../../hooks/usePrefectures';
 import Link from 'next/link';
 
 const Prefectures: NextPage = () => {
