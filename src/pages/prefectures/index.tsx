@@ -16,7 +16,12 @@ const Prefectures: NextPage = () => {
             prefName: string | null | undefined;
           }) => (
             <li key={item.prefCode}>
-              <Link href={'/prefectures/#'}>
+              <Link
+                href={{
+                  pathname: '/prefectures/[code]',
+                  query: { code: item.prefCode, name: item.prefName },
+                }}
+              >
                 <a>{item.prefName}</a>
               </Link>
             </li>
