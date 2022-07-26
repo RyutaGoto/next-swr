@@ -11,6 +11,18 @@ const City: NextPage = () => {
   return (
     <>
       <h1>{router.query.name}の都市一覧</h1>
+      <ul>
+        {cities.result.map(
+          (item: {
+            bigCityFlag: '0' | '1' | '2' | '3';
+            cityCode: string;
+            cityName: string;
+            prefCode: number;
+          }) => (
+            <li key={item.cityCode}>{item.cityName}</li>
+          )
+        )}
+      </ul>
     </>
   );
 };
