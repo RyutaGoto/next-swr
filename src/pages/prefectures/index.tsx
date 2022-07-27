@@ -11,10 +11,7 @@ const Prefectures: NextPage = () => {
       <h1>都道府県一覧</h1>
       <ul>
         {prefectures.result.map(
-          (item: {
-            prefCode: number | null | undefined;
-            prefName: string | null | undefined;
-          }) => (
+          (item: { prefCode: number; prefName: string }) => (
             <li key={item.prefCode}>
               <Link
                 href={{
