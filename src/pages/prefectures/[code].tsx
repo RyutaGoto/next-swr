@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { useCities } from '../../hooks/useCities';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const City: NextPage = () => {
   const router = useRouter();
@@ -22,6 +23,9 @@ const City: NextPage = () => {
           )
         )}
       </ul>
+      <Link href="/prefectures">
+        <a>都道府県一覧にもどる</a>
+      </Link>
     </>
   );
 };
